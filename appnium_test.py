@@ -61,6 +61,7 @@ class AndroidTests(unittest.TestCase):
         daimajia_slider_image = self.driver.find_element_by_id('cn.knet.eqxiu:id/daimajia_slider_image')
         self.assertIsNotNone(daimajia_slider_image)
 
+    # 无场景时创建模板再删除
     def test_c_empty_to_create_template_and_delete(self):
         self.driver.implicitly_wait(10)
         self.driver.find_element_by_id("cn.knet.eqxiu:id/no_scene_img")
@@ -71,24 +72,28 @@ class AndroidTests(unittest.TestCase):
         self.delete_scene()
         self.driver.find_element_by_id("cn.knet.eqxiu:id/no_scene_img")
 
+    # 创建商务样例并删除
     def test_d_create_business_and_delete(self):
         self.create_business()
         self.go_back()
         self.praise_check()
         self.delete_scene()
 
+    # 创建贺卡并删除
     def test_e_create_cards_and_delete(self):
         self.create_cards()
         self.save_scene_in_preview()
         self.praise_check()
         self.delete_scene()
 
+    # 创建相册并删除
     def test_f_create_photo_gallery(self):
         self.create_photo()
         self.save_scene_in_preview()
         self.praise_check()
         self.delete_scene()
 
+    # 创建模板并删除
     def test_g_create_template_and_set_and_delete(self):
         self.driver.implicitly_wait(10)
         self.create_template()

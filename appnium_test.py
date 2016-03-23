@@ -19,6 +19,7 @@ class AndroidTests(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
+    # 滑屏
     def test_a_slideshow_page(self):
         # self.skipTest('Tested')
         # 起始页
@@ -44,6 +45,7 @@ class AndroidTests(unittest.TestCase):
         register_view_btn = self.driver.find_element_by_id('cn.knet.eqxiu:id/choice_register')
         self.assertIsNotNone(register_view_btn)
 
+    # 登录
     def test_b_login(self):
         self.driver.implicitly_wait(10)
         try:

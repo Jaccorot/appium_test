@@ -11,7 +11,7 @@ import os
 import random
 
 
-class AndroidTests(unittest.TestCase):
+class SmokeTests(unittest.TestCase):
     def setUp(self):
         desired_caps = desired_capabilities.get_desired_capabilities('eqxiu-2.2.2.0007.apk')
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
@@ -326,7 +326,7 @@ class AndroidTests(unittest.TestCase):
         self.driver.find_element_by_name(flip_info).click()
 
 if __name__ == "__main__":
-    suite = unittest.TestLoader().loadTestsFromTestCase(AndroidTests)
+    suite = unittest.TestLoader().loadTestsFromTestCase(SmokeTests)
     unittest.TextTestRunner(verbosity=2).run(suite)
     # suite = unittest.TestSuite()
     # suite.addTest(AndroidTests("test_a_slideshow_page"))

@@ -19,7 +19,7 @@ class SmokeTests(unittest.TestCase):
     def tearDown(self):
         self.driver.quit()
 
-    # 滑屏
+    # 首次打开滑屏
     def test_a_slideshow_page(self):
         # self.skipTest('Tested')
         # 起始页
